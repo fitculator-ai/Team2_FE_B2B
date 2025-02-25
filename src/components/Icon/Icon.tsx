@@ -11,7 +11,7 @@ export default function Icon({ name, color, fontSize }: IconTypes) {
     display: "inline-flex",
     justifyContent: "center",
     alignItems: "center",
-    fontSize: `${fontSize}px`,
+    fontSize: `${fontSize}rem`,
     color: color,
   };
 
