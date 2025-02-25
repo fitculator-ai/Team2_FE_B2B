@@ -1,6 +1,6 @@
-export default function Navbar() {
+export default function NavBar() {
   return (
-    <nav className="flex justify-between p-4">
+    <nav className="fixed top-0 left-0 flex w-full justify-between bg-white p-4">
       <button>로고</button>
       <ul className="flex gap-4">
         <li>
