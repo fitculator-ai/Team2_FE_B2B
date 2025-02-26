@@ -1,0 +1,120 @@
+@font-face {
+  font-family: "fitculator";
+  src: url("/icons/fitculator.eot");
+  src:
+    url("/icons/fitculator.eot") format("embedded-opentype"),
+    url("/icons/fitculator.ttf") format("truetype"),
+    url("/icons/fitculator.woff") format("woff"),
+    url("/icons/fitculator.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: inline-block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "fitculator" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chevron-top:before {
+  content: "\e904";
+  color: currentColor;
+}
+.icon-chevron-right:before {
+  content: "\e903";
+  color: currentColor;
+}
+.icon-chevron-bottom:before {
+  content: "\e901";
+  color: currentColor;
+}
+.icon-chevron-left:before {
+  content: "\e902";
+  color: currentColor;
+}
+.icon-menu:before {
+  content: "\e905";
+  color: currentColor;
+}
+.icon-logo-dark {
+  display: inline-block;
+}
+.icon-logo-dark .path1:before {
+  content: "\e907";
+  color: rgb(255, 255, 255);
+}
+.icon-logo-dark .path2:before {
+  content: "\e908";
+  margin-left: -1em;
+  color: rgb(38, 203, 255);
+}
+.icon-logo-light {
+  display: inline-flex;
+}
+.icon-logo-light:before {
+  content: "\e909";
+  color: rgb(0, 0, 0);
+}
+.icon-logo-light .path2:before {
+  content: "\e90a";
+  margin-left: -1em;
+  color: rgb(38, 203, 255);
+}
+.icon-logo-text-dark:before {
+  content: "\e90b";
+  color: #fff;
+}
+.icon-logo-text-light:before {
+  content: "\e90c";
+  color: currentColor;
+}
+.icon-point:before {
+  content: "\e90d";
+  color: currentColor;
+}
+.icon-email:before {
+  content: "\e900";
+  color: currentColor;
+}
+.icon-threads:before {
+  content: "\e90e";
+  color: currentColor;
+}
+.icon-instagram:before {
+  content: "\e906";
+  color: currentColor;
+}
+.icon-arrow-top:before {
+  content: "\ea3a";
+  color: currentColor;
+}
+.icon-arrow-right:before {
+  content: "\ea3c";
+  color: currentColor;
+}
+.icon-arrow-down:before {
+  content: "\ea3e";
+  color: currentColor;
+}
+.icon-arrow-left:before {
+  content: "\ea40";
+  color: currentColor;
+}
+.icon-checkbox-checked:before {
+  content: "\ea52";
+  color: currentColor;
+}
+.icon-checkbox-unchecked:before {
+  content: "\ea53";
+  color: currentColor;
+}
