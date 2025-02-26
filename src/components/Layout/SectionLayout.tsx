@@ -30,7 +30,6 @@ export default function SectionLayout({
           {description && <p className="text-sm">{description}</p>}
         </div>
       )}
-
       {children}
     </section>
   );
