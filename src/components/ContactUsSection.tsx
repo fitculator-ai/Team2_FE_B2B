@@ -4,7 +4,7 @@ import mainLogo from "../../public/image/logo_text.png";
 
 export default function ContactUsSection() {
   return (
-    <section className="flex flex-row items-start justify-between">
+    <section id="contactUs" className="flex flex-row items-start justify-between">
       <h1 className="sr-only">문의하기</h1>
       <h2 className="mt-36 flex flex-row items-center">
         <Image
