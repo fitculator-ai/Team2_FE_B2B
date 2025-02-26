@@ -3,7 +3,7 @@ import SectionLayout from "./SectionLayout";
 export default function Footer() {
   return (
     <footer>
-      <SectionLayout isFullPage="false">
+      <SectionLayout isFullPage={false}>
         <nav className="flex justify-between pb-4">
           <button>로고</button>
 
