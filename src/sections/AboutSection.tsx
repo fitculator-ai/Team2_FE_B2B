@@ -1,3 +1,4 @@
+"use client";
 import AboutCard from "@/components/Card/AboutCard";
 import SectionLayout from "@/components/Layout/SectionLayout";
 
@@ -36,7 +37,7 @@ const aboutData = [
 
 export default function About() {
   return (
-    <SectionLayout isFullPage="true" title="About" position="left" subTitleColor="point">
+    <SectionLayout isFullPage={false} title="About" position="left" subTitleColor="point">
       <AboutCard aboutData={aboutData} />
     </SectionLayout>
   );

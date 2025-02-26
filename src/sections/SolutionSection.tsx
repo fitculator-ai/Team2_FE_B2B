@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "motion/react";
 import SectionLayout from "@/components/Layout/SectionLayout";
 import SolutionCard from "@/components/Card/SolutionCard";
 
@@ -22,13 +24,19 @@ const SolutionData = [
 
 export default function Solution() {
   return (
-    <SectionLayout
-      isFullPage="true"
-      title="FITCULATOR 만의 솔루션"
-      position="center"
-      subTitleColor="point"
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 2.5 }}
     >
-      <SolutionCard SolutionData={SolutionData} />
-    </SectionLayout>
+      <SectionLayout
+        isFullPage={false}
+        title="FITCULATOR 만의 솔루션"
+        position="center"
+        subTitleColor="point"
+      >
+        <SolutionCard SolutionData={SolutionData} />
+      </SectionLayout>
+    </motion.div>
   );
 }
