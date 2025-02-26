@@ -1,4 +1,5 @@
 type SectionLayoutProps = {
+  isFullPage: "true" | "false";
   title?: string;
   subTitle?: string;
   position?: "left" | "center";
@@ -8,6 +9,7 @@ type SectionLayoutProps = {
 };
 
 export default function SectionLayout({
+  isFullPage,
   title,
   subTitle,
   position = "left",
@@ -17,9 +19,10 @@ export default function SectionLayout({
 }: SectionLayoutProps) {
   const titlePosition = position === "left" ? "text-left" : "text-center";
   const subColor = subTitleColor === "base" ? "text-black" : "text-[#4FD5FF]";
+  const fullPage = isFullPage ? "h-screen w-screen" : "";
 
   return (
-    <section className="px-20 py-14">
+    <section className={`px-20 py-14 ${fullPage}`}>
       {(title || subTitle) && (
         <div className={`pb-10 ${titlePosition}`}>
           {title && <h2 className="text-[#4FD5FF]">{title}</h2>}
