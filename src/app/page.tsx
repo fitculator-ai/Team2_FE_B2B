@@ -1,4 +1,9 @@
 // import SectionLayout from "@/components/Layout/SectionLayout";
+import ProcessSection from "@/components/ProcessSection";
+import ContactUsSection from "@/components/ContactUsSection";
+import FAQSection from "@/components/FAQSection";
+import Review from "@/sections/Review";
+import Solution from "@/sections/Solution";
 
 export default function RootPage() {
   return (
@@ -13,6 +18,11 @@ export default function RootPage() {
       >
         <h1>하위 내용</h1>
       </SectionLayout> */}
+      <Review></Review>
+      <Solution></Solution>
+      <ProcessSection></ProcessSection>
+      <FAQSection></FAQSection>
+      <ContactUsSection></ContactUsSection>
     </>
   );
 }
