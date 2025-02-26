@@ -1,15 +1,15 @@
 type SectionLayoutProps = {
-  isFullPage: "true" | "false";
+  isFullPage?: boolean;
   title?: string;
   subTitle?: string;
   position?: "left" | "center";
   description?: string;
   subTitleColor?: "base" | "point";
-  children: React.ReactNode;
+  children?: React.ReactNode;
 };
 
 export default function SectionLayout({
-  isFullPage,
+  isFullPage = true,
   title,
   subTitle,
   position = "left",
