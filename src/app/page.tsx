@@ -2,8 +2,10 @@
 import ProcessSection from "@/components/ProcessSection";
 import ContactUsSection from "@/components/ContactUsSection";
 import FAQSection from "@/components/FAQSection";
-import Review from "@/sections/Review";
-import Solution from "@/sections/Solution";
+import ReviewSection from "@/sections/ReviewSection";
+import SlideSolutionSection from "@/sections/SlideSolutionSection";
+import AboutSection from "@/sections/AboutSection";
+import SolutionSection from "@/sections/SolutionSection";
 
 export default function RootPage() {
   return (
@@ -18,8 +20,10 @@ export default function RootPage() {
       >
         <h1>하위 내용</h1>
       </SectionLayout> */}
-      <Review></Review>
-      <Solution></Solution>
+      <ReviewSection></ReviewSection>
+      <SolutionSection></SolutionSection>
+      <AboutSection></AboutSection>
+      <SlideSolutionSection></SlideSolutionSection>
       <ProcessSection></ProcessSection>
       <FAQSection></FAQSection>
       <ContactUsSection></ContactUsSection>
