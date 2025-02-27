@@ -2,7 +2,7 @@ import ReviewSection from "@/sections/ReviewSection";
 import SolutionSection from "@/sections/SolutionSection";
 import AboutSection from "@/sections/AboutSection";
 import SlideSolutionSection from "@/sections/SlideSolutionSection";
-import StatisticsSection from "@/components/StatisticsSection";
+import StatisticsSection from "@/sections/StatisticsSection";
 import TeamInfoSection from "@/sections/TeamInfoSection";
 import ProcessSection from "@/components/ProcessSection";
 import FAQSection from "@/components/FAQSection";

@@ -131,16 +131,16 @@ export default function Slide({ type }: typeProp) {
               nextEl: ".review-next-button",
               prevEl: ".review-prev-button",
             }}
-            spaceBetween={40}
-            slidesPerView={1}
+            spaceBetween={30}
+            slidesPerView={1.5}
             className="h-auto"
             breakpoints={{
               768: {
-                slidesPerView: 3,
-                spaceBetween: 40,
+                slidesPerView: 2,
+                spaceBetween: 50,
               },
               1024: {
-                slidesPerView: 4,
+                slidesPerView: 3,
                 spaceBetween: 60,
               },
             }}
@@ -219,18 +219,27 @@ export default function Slide({ type }: typeProp) {
 
     case "team":
       return (
-        <div className="relative w-full">
+        <div className="mx-auto w-full max-w-[1200px]">
           <Swiper
             modules={[Navigation]}
             direction={"horizontal"}
-            loop={true}
             navigation={{
               nextEl: ".team-next-button",
               prevEl: ".team-prev-button",
             }}
-            spaceBetween={40}
-            slidesPerView={4}
+            spaceBetween={30}
+            slidesPerView={1.5}
             className="h-auto"
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 16,
+              },
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 24,
+              },
+            }}
           >
             {teamData.map((team) => (
               <SwiperSlide key={team.id} className="mb-[3rem]">
@@ -242,6 +251,7 @@ export default function Slide({ type }: typeProp) {
                 />
               </SwiperSlide>
             ))}
+
             <div className="flex items-center justify-center gap-[0.75rem]">
               <button className="team-prev-button flex h-[1.5rem] w-[1.5rem] cursor-pointer items-center justify-center rounded-[0.25rem] border border-[#505050] bg-[#fff]">
                 ←

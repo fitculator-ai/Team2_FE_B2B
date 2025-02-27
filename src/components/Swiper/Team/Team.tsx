@@ -7,12 +7,12 @@ interface teamType {
 
 export default function Team({ name, nickname, careers, image }: teamType) {
   return (
-    <div className="rounded-2xl px-8 py-4 shadow-lg">
-      <div className="flex gap-2 pb-5">
-        <div className="h-10 w-10 rounded-[100%] bg-pink-400"></div>
+    <div className="h-[410px] max-w-[358px] rounded-2xl px-8 py-4 shadow-lg">
+      <div className="flex items-center gap-2 pb-5">
+        <div className="h-14 w-14 rounded-[100%] bg-gray-200"></div>
 
         <div>
-          <p>{name}</p>
+          <p className="font-semibold">{name}</p>
           <p className="text-sm">{nickname}</p>
         </div>
       </div>
