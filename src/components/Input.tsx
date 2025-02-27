@@ -1,27 +1,37 @@
 "use client";
 
-import { ChangeEvent, useState } from "react";
+import Icon from "./Icon/Icon";
 
-export default function Input({ label, type, id, placeholder, isRequired }) {
-  const [inputVal, setInputVal] = useState("");
-
-  const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setInputVal(e.target.value);
-  };
-
+export default function Input({
+  register,
+  label,
+  type,
+  id,
+  placeholder,
+  isRequired,
+  name,
+}) {
   return (
     <div role="group" aria-label={`${label} 영역`} className="flex flex-col">
-      <label htmlFor={id} className="mb-[1px] font-semibold">
+      <label htmlFor={id} className="mb-[1px] inline font-semibold">
         {label}
+        {isRequired && (
+          <Icon
+            name="icon-point"
+            fontSize={0.7}
+            color="#F11E1E"
+            style={{ paddingLeft: "2px" }}
+          ></Icon>
+        )}
       </label>
-      {/* {isRequired && } */}
+
       <input
         id={id}
+        name={name}
         type={type}
         placeholder={placeholder}
-        value={inputVal}
-        className="rounded-sm border border-gray-400 p-2 text-sm outline-[#4FD5FF] focus:bg-[#F2F6F8]/68 focus:outline"
-        onChange={handleInputChange}
+        className="rounded-sm border border-gray-400 p-2 text-sm outline-[#1E88E5] focus:bg-[#F2F6F8]/68 focus:outline"
+        {...register(name, { required: isRequired })}
       />
     </div>
   );

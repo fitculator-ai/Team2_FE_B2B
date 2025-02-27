@@ -118,3 +118,8 @@
   content: "\ea53";
   color: currentColor;
 }
+
+.icon-plus:before {
+  content: "\e900";
+  color: currentColor;
+}
