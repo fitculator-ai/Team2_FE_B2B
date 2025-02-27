@@ -5,13 +5,14 @@ import { Navigation, Mousewheel, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Review from "@/components/Swiper/Review/Review";
 import Solution from "@/components/Swiper/Solution/Solution";
+import Team from "@/components/Swiper/Team/Team";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 interface typeProp {
-  type: "review" | "solution";
+  type: "review" | "solution" | "team";
 }
 
 const reviewData = [
@@ -77,6 +78,42 @@ const solutionData = [
     imgSrc: "/image/solution-0.webp",
     title: "전문가의 노하우를 반영한 AI 피드백 제공",
     desc: "심박수를 이용해 체력 증가에 대한 실제적인 데이터를 받아보세요.",
+  },
+];
+
+const teamData = [
+  {
+    id: 1,
+    name: "류현지",
+    nickname: "@ryoohyun",
+    careers: [
+      "연세대학교 체육학과 박사 졸업",
+      "연세대학교 체육교육학과 강사",
+      "국민체육진흥공단 건강운동관리사 연수원 강사",
+    ],
+    image: "http",
+  },
+  {
+    id: 2,
+    name: "박영진",
+    nickname: "@vpak.9",
+    careers: [
+      "연세대학교 체육학과 석사 졸업",
+      "연세대학교 융합체육과학선도 연구소 보조 연구원",
+      "대한축구협회 피트니스 트레이닝 자격 보유",
+    ],
+    image: "http",
+  },
+  {
+    id: 3,
+    name: "최재하",
+    nickname: "@jaeha_pool",
+    careers: [
+      "서울대학교 체육교육과 학사",
+      "National Academy of Sport Medicine Personal Trainer Certificate",
+      "University of Arizona Fitness & Wellness Coach",
+    ],
+    image: "http",
   },
 ];
 
@@ -151,6 +188,43 @@ export default function Slide({ type }: typeProp) {
               <div className="solution-pagination flex w-[2rem] flex-col items-center gap-[0.5rem] py-[0.5rem]"></div>
               <button className="custom-next-button flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 bg-white shadow-md transition-colors hover:bg-gray-50">
                 ↓
+              </button>
+            </div>
+          </Swiper>
+        </div>
+      );
+
+    case "team":
+      return (
+        <div className="relative w-full">
+          <Swiper
+            modules={[Navigation]}
+            direction={"horizontal"}
+            loop={true}
+            navigation={{
+              nextEl: ".team-next-button",
+              prevEl: ".team-prev-button",
+            }}
+            spaceBetween={40}
+            slidesPerView={4}
+            className="h-auto"
+          >
+            {teamData.map((team) => (
+              <SwiperSlide key={team.id} className="mb-[3rem]">
+                <Team
+                  name={team.name}
+                  nickname={team.nickname}
+                  careers={team.careers}
+                  image={team.image}
+                />
+              </SwiperSlide>
+            ))}
+            <div className="flex items-center justify-center gap-[0.75rem]">
+              <button className="team-prev-button flex h-[1.5rem] w-[1.5rem] cursor-pointer items-center justify-center rounded-[0.25rem] border border-[#505050] bg-[#fff]">
+                ←
+              </button>
+              <button className="team-next-button flex h-[1.5rem] w-[1.5rem] cursor-pointer items-center justify-center rounded-[0.25rem] border border-[#505050] bg-[#fff]">
+                →
               </button>
             </div>
           </Swiper>

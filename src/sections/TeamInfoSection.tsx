@@ -1,4 +1,5 @@
 import SectionLayout from "@/components/Layout/SectionLayout";
+import Slide from "@/components/Swiper/Swiper";
 
 export default function TeamInfoSection() {
   const teamData = [
@@ -36,9 +37,11 @@ export default function TeamInfoSection() {
 
   return (
     <SectionLayout
-      title="advisor"
+      title="Professional"
       subTitle="운동 생리학 박사가 직접 만들고 설계한 FITCULATOR"
     >
+      <Slide type="team" />
+      {/* 
       <div className="grid grid-cols-3 gap-4">
         {teamData.map((member, index) => (
           <div key={index} className="rounded-2xl px-8 py-4 shadow-lg">
@@ -58,7 +61,7 @@ export default function TeamInfoSection() {
             </ul>
           </div>
         ))}
-      </div>
+      </div> */}
     </SectionLayout>
   );
 }
