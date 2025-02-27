@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Icon from "@/components/Icon/Icon";
 
 interface solutionType {
   imgSrc: string;
