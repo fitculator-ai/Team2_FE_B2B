@@ -5,6 +5,7 @@ type SectionLayoutProps = {
   position?: "left" | "center";
   description?: string;
   subTitleColor?: "base" | "point";
+  sectionId?: "home" | "contactUs";
   children?: React.ReactNode;
 };
 
@@ -16,13 +17,14 @@ export default function SectionLayout({
   description,
   children,
   subTitleColor = "base",
+  sectionId,
 }: SectionLayoutProps) {
   const titlePosition = position === "left" ? "text-left" : "text-center";
   const subColor = subTitleColor === "base" ? "text-black" : "text-[#4FD5FF]";
   const fullPage = isFullPage ? "h-screen w-screen" : "";
 
   return (
-    <section className={`px-7 py-[5.625rem] md:px-15 ${fullPage}`}>
+    <section id={sectionId} className={`px-7 py-[5.625rem] md:px-15 ${fullPage}`}>
       {(title || subTitle) && (
         <div className={`pb-10 ${titlePosition}`}>
           {title && <h2 className="text font-bold text-[#4FD5FF]">{title}</h2>}
