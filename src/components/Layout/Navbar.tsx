@@ -4,7 +4,7 @@ import mainLogo from "../../../public/image/logo_text.png";
 
 export default function NavBar() {
   return (
-    <nav className="fixed top-0 left-0 flex w-full justify-between bg-[#F9F9F9] px-7 py-5 md:px-15">
+    <nav className="fixed top-0 left-0 z-50 flex w-full justify-between bg-[#F9F9F9] px-7 py-5 md:px-15">
       <Link href="/#home">
         <Image
           src={mainLogo}

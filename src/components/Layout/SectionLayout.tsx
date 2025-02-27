@@ -22,15 +22,30 @@ export default function SectionLayout({
   const fullPage = isFullPage ? "h-screen w-screen" : "";
 
   return (
-    <section className={`px-7 py-14 md:px-15 ${fullPage} `}>
+    <section className={`px-7 py-[5.625rem] md:px-15 ${fullPage}`}>
       {(title || subTitle) && (
         <div className={`pb-10 ${titlePosition}`}>
-          {title && <h2 className="text-[#4FD5FF]">{title}</h2>}
-          {subTitle && <h3 className={`text-3xl ${subColor}`}>{subTitle}</h3>}
+          {title && <h2 className="text font-bold text-[#4FD5FF]">{title}</h2>}
+          {subTitle && (
+            <h3 className={`text-2xl font-semibold ${subColor}`}>{subTitle}</h3>
+          )}
           {description && <p className="text-sm">{description}</p>}
         </div>
       )}
       {children}
     </section>
   );
+}
+
+{
+  /* <SectionLayout
+        isFullPage="true"
+        title="partnership Review"
+        subTitle="Fit만의 솔루션"
+        position="center"
+        subTitleColor="point"
+        description="수많은 기업에서 이미 사용하고 있어요요"
+      >
+        <h1>하위 내용</h1>
+      </SectionLayout> */
 }
