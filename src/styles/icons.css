@@ -27,23 +27,23 @@
 }
 
 .icon-chevron-top:before {
-  content: "\e904";
+  content: "\e905";
   color: currentColor;
 }
 .icon-chevron-right:before {
-  content: "\e903";
+  content: "\e904";
   color: currentColor;
 }
 .icon-chevron-bottom:before {
-  content: "\e901";
-  color: currentColor;
-}
-.icon-chevron-left:before {
   content: "\e902";
   color: currentColor;
 }
+.icon-chevron-left:before {
+  content: "\e903";
+  color: currentColor;
+}
 .icon-menu:before {
-  content: "\e905";
+  content: "\e906";
   color: currentColor;
 }
 .icon-logo-dark {
@@ -71,15 +71,15 @@
   color: rgb(38, 203, 255);
 }
 .icon-logo-text-dark:before {
-  content: "\e90b";
+  content: "\e90c";
   color: #fff;
 }
 .icon-logo-text-light:before {
-  content: "\e90c";
+  content: "\e90d";
   color: currentColor;
 }
 .icon-point:before {
-  content: "\e90d";
+  content: "\e90e";
   color: currentColor;
 }
 .icon-email:before {
@@ -87,11 +87,11 @@
   color: currentColor;
 }
 .icon-threads:before {
-  content: "\e90e";
+  content: "\e90f";
   color: currentColor;
 }
 .icon-instagram:before {
-  content: "\e906";
+  content: "\e907";
   color: currentColor;
 }
 .icon-arrow-top:before {
