@@ -1,13 +1,24 @@
 import SectionLayout from "./SectionLayout";
+import Link from "next/link";
+import Image from "next/image";
+import mainLogo from "../../../public/image/logo_text.png";
+import Icon from "../Icon/Icon";
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className="bg-[#F9F9F9]">
       <SectionLayout isFullPage={false}>
-        <nav className="flex justify-between pb-4">
-          <button>로고</button>
+        <nav className="flex flex-col gap-11 pb-10 md:flex-row md:justify-between md:gap-12 md:pb-20">
+          <Link href="/#home">
+            <Image
+              src={mainLogo}
+              className="h-[1.75rem] w-[11.0625rem]"
+              alt="fitculator 로고"
+              aria-label="핏큘레이터"
+            />
+          </Link>
 
-          <ul className="flex gap-1">
+          <ul className="flex flex-col gap-3 font-bold text-[#625C5C] md:flex-row md:gap-6 lg:gap-9 lg:text-lg">
             <li>
               <a href="https://airtable.com/apprBZkCTk4gpMmSW/pagWPcKsiuiwaS8zs/form">
                 CONTACT US
@@ -29,7 +40,7 @@ export default function Footer() {
           </ul>
         </nav>
 
-        <div className="flex justify-between">
+        <div className="flex flex-col-reverse gap-10 text-[#625C5C] md:flex-row md:justify-between">
           <ul>
             <li>Fitculator (핏큘레이터)</li>
             <li>사업자등록번호: 262-67-00523 | 대표:류현지</li>
@@ -39,15 +50,21 @@ export default function Footer() {
             <li>©2024 Fitculator. All rights reserved.</li>
           </ul>
 
-          <ul className="flex gap-1">
+          <ul className="flex gap-4">
             <li>
-              <a href="mailto:info@fitculator.io">메시지i</a>
+              <a href="mailto:info@fitculator.io">
+                <Icon name="icon-email" fontSize={1.3}></Icon>
+              </a>
             </li>
             <li>
-              <a href="https://www.threads.net/@fitculator_official">오피셜i</a>
+              <a href="https://www.threads.net/@fitculator_official">
+                <Icon name="icon-threads" fontSize={1.3}></Icon>
+              </a>
             </li>
             <li>
-              <a href="https://instagram.com/fitculator_official/">인스타i</a>
+              <a href="https://instagram.com/fitculator_official/">
+                <Icon name="icon-instagram" fontSize={1.3}></Icon>
+              </a>
             </li>
           </ul>
         </div>

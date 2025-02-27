@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Review from "@/components/Swiper/Review/Review";
 import Solution from "@/components/Swiper/Solution/Solution";
 import Team from "@/components/Swiper/Team/Team";
+import Icon from "@/components/Icon/Icon";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -131,8 +132,18 @@ export default function Slide({ type }: typeProp) {
               prevEl: ".review-prev-button",
             }}
             spaceBetween={40}
-            slidesPerView={4}
+            slidesPerView={1}
             className="h-auto"
+            breakpoints={{
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+              },
+              1024: {
+                slidesPerView: 4,
+                spaceBetween: 60,
+              },
+            }}
           >
             {reviewData.map((review) => (
               <SwiperSlide key={review.id} className="mb-[3rem]">
@@ -141,10 +152,10 @@ export default function Slide({ type }: typeProp) {
             ))}
             <div className="flex items-center justify-center gap-[0.75rem]">
               <button className="review-prev-button flex h-[1.5rem] w-[1.5rem] cursor-pointer items-center justify-center rounded-[0.25rem] border border-[#505050] bg-[#fff]">
-                ←
+                <Icon name="icon-arrow-left" color="#000" fontSize={1} />
               </button>
               <button className="review-next-button flex h-[1.5rem] w-[1.5rem] cursor-pointer items-center justify-center rounded-[0.25rem] border border-[#505050] bg-[#fff]">
-                →
+                <Icon name="icon-arrow-right" color="#000" fontSize={1} />
               </button>
             </div>
           </Swiper>
@@ -152,10 +163,10 @@ export default function Slide({ type }: typeProp) {
       );
     case "solution":
       return (
-        <div className="relative w-full">
+        <div className="relative h-full w-full">
           <Swiper
             modules={[Navigation, Mousewheel, Pagination]}
-            direction={"vertical"}
+            direction={"horizontal"}
             loop={true}
             navigation={{
               nextEl: ".custom-next-button",
@@ -170,7 +181,16 @@ export default function Slide({ type }: typeProp) {
             mousewheel={true}
             spaceBetween={0}
             slidesPerView={1}
-            className="relative z-10 h-[41.25rem]"
+            speed={1000}
+            className="relative z-10 h-full lg:h-[41.25rem]"
+            breakpoints={{
+              768: {
+                direction: "horizontal",
+              },
+              1024: {
+                direction: "vertical",
+              },
+            }}
           >
             {solutionData.map((solution) => (
               <SwiperSlide key={solution.id}>
@@ -181,13 +201,16 @@ export default function Slide({ type }: typeProp) {
                 />
               </SwiperSlide>
             ))}
-            <div className="absolute top-1/2 right-[5rem] z-50 flex -translate-y-1/2 flex-col items-center justify-center gap-[10rem]">
-              <button className="custom-prev-button flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 bg-white shadow-md transition-colors hover:bg-gray-50">
-                ↑
+            <div className="absolute right-1/2 bottom-[2rem] z-30 flex translate-x-1/2 flex-row items-center justify-center gap-[1rem] md:bottom-[1rem] lg:top-1/2 lg:right-[3rem] lg:-translate-y-1/2 lg:flex-col lg:items-center lg:justify-center lg:gap-[5rem]">
+              <button className="custom-prev-button flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border border-gray-200 bg-white shadow-md transition-colors hover:bg-gray-50">
+                <Icon name="icon-arrow-top" color="#000" fontSize={1} />
               </button>
-              <div className="solution-pagination flex w-[2rem] flex-col items-center gap-[0.5rem] py-[0.5rem]"></div>
-              <button className="custom-next-button flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 bg-white shadow-md transition-colors hover:bg-gray-50">
-                ↓
+              <div
+                className="solution-pagination flex flex-row items-center gap-[0.5rem] py-[0.5rem] lg:w-[2rem] lg:translate-y-0 lg:transform-none lg:flex-col"
+                style={{ transform: "none" }}
+              ></div>
+              <button className="custom-next-button flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border border-gray-200 bg-white shadow-md transition-colors hover:bg-gray-50">
+                <Icon name="icon-arrow-down" color="#000" fontSize={1} />
               </button>
             </div>
           </Swiper>

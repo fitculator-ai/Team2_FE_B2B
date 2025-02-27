@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Footer from "@/components/Layout/Footer";
 import "@/styles/icons.css";
 import NavBar from "@/components/Layout/NavBar";
 import Footer from "@/components/Layout/Footer";
@@ -19,7 +20,7 @@ const pretendard = localFont({
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ko" className={`${pretendard.className}`}>
+    <html lang="ko" className={`${pretendard.className} scroll-smooth`}>
       <body className={`${pretendard.variable}`}>
         <NavBar />
         {children}

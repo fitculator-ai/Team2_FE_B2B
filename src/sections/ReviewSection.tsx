@@ -4,7 +4,7 @@ import Slide from "@/components/Swiper/Swiper";
 export default function Review() {
   return (
     <SectionLayout
-      isFullPage="true"
+      isFullPage={false}
       title="Partnership Review"
       position="left"
       subTitleColor="point"
