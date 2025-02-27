@@ -1,11 +1,11 @@
 interface teamType {
   name: string;
   nickname: string;
-  careers: [];
-  image: string;
+  careers: string[];
+  // image: string;
 }
 
-export default function Team({ name, nickname, careers, image }: teamType) {
+export default function Team({ name, nickname, careers }: teamType) {
   return (
     <div className="h-[410px] max-w-[358px] rounded-2xl px-8 py-4 shadow-lg">
       <div className="flex items-center gap-2 pb-5">
