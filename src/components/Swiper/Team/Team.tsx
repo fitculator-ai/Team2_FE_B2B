@@ -1,7 +1,7 @@
 interface teamType {
   name: string;
   nickname: string;
-  careers: [];
+  careers: string[];
 }
 
 export default function Team({ name, nickname, careers}: teamType) {
