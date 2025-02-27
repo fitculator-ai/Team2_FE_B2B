@@ -11,7 +11,7 @@ import Icon from "@/components/Icon/Icon";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
+  
 interface typeProp {
   type: "review" | "solution" | "team";
 }
