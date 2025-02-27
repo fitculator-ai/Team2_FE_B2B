@@ -92,7 +92,6 @@ const teamData = [
       "연세대학교 체육교육학과 강사",
       "국민체육진흥공단 건강운동관리사 연수원 강사",
     ],
-    image: "http",
   },
   {
     id: 2,
@@ -103,7 +102,6 @@ const teamData = [
       "연세대학교 융합체육과학선도 연구소 보조 연구원",
       "대한축구협회 피트니스 트레이닝 자격 보유",
     ],
-    image: "http",
   },
   {
     id: 3,
@@ -114,7 +112,6 @@ const teamData = [
       "National Academy of Sport Medicine Personal Trainer Certificate",
       "University of Arizona Fitness & Wellness Coach",
     ],
-    image: "http",
   },
 ];
 
@@ -243,12 +240,7 @@ export default function Slide({ type }: typeProp) {
           >
             {teamData.map((team) => (
               <SwiperSlide key={team.id} className="mb-[3rem]">
-                <Team
-                  name={team.name}
-                  nickname={team.nickname}
-                  careers={team.careers}
-                  image={team.image}
-                />
+                <Team name={team.name} nickname={team.nickname} careers={team.careers} />
               </SwiperSlide>
             ))}
 
