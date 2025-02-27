@@ -2,7 +2,7 @@ interface teamType {
   name: string;
   nickname: string;
   careers: [];
-  image: string;
+  image?: string;
 }
 
 export default function Team({ name, nickname, careers, image }: teamType) {
