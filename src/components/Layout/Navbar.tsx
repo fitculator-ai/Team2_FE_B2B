@@ -1,16 +1,16 @@
 import Link from "next/link";
 import Image from "next/image";
-import mainLogo from "../../../public/image/logo_text.png";
 
 export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 z-50 flex w-full justify-between bg-[#F9F9F9] px-7 py-5 md:px-15">
       <Link href="/#home">
         <Image
-          src={mainLogo}
-          className="h-[1.5625rem] w-[10.125rem]"
+          src="/image/logo_text.webp"
           alt="fitculator 로고"
           aria-label="핏큘레이터"
+          width={162}
+          height={25}
         />
       </Link>
 
