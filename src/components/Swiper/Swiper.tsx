@@ -16,7 +16,7 @@ interface typeProp {
   type: "review" | "solution" | "team";
 }
 
-const reviewData = [
+const REVIEW_DATA = [
   {
     id: 1,
     name: "이OO",
@@ -49,40 +49,46 @@ const reviewData = [
   },
 ];
 
-const solutionData = [
+const SOLUTION_DATA = [
+  {
+    id: 0,
+    imgSrc: "/image/solution-0.webp",
+    title: "기본 패키지: 운동관리 챌린지",
+    subTitle: "8주 프로그램",
+    desc: [
+      "스마트워치 데이터 기반 개인별 적정 운동량 설정",
+      "주간 목표 달성 트래킹 및 피드백",
+      "운동생리학 기반 건강 컨텐츠 제공",
+      "부서/팀별 참여 현황 대시보드",
+    ],
+  },
   {
     id: 1,
     imgSrc: "/image/solution-0.webp",
-    title: "전문가의 노하우를 반영한 AI 피드백 제공",
-    desc: "심박수를 이용해 체력 증가에 대한 실제적인 데이터를 받아보세요.",
+    title: "프리미엄 패키지: 체중관리 챌린지",
+    subTitle: "8주 프로그램",
+    desc: [
+      "운동 + 식단 통합 관리 시스템",
+      "개인별 맞춤형 식단 가이드라인",
+      "체성분 변화 트래킹 및 분석",
+      "건강검진 결과와 연계한 맞춤형 목표 설정",
+    ],
   },
   {
     id: 2,
     imgSrc: "/image/solution-0.webp",
-    title: "전문가의 노하우를 반영한 AI 피드백 제공",
-    desc: "심박수를 이용해 체력 증가에 대한 실제적인 데이터를 받아보세요.",
-  },
-  {
-    id: 3,
-    imgSrc: "/image/solution-0.webp",
-    title: "전문가의 노하우를 반영한 AI 피드백 제공",
-    desc: "심박수를 이용해 체력 증가에 대한 실제적인 데이터를 받아보세요.",
-  },
-  {
-    id: 4,
-    imgSrc: "/image/solution-0.webp",
-    title: "전문가의 노하우를 반영한 AI 피드백 제공",
-    desc: "심박수를 이용해 체력 증가에 대한 실제적인 데이터를 받아보세요.",
-  },
-  {
-    id: 5,
-    imgSrc: "/image/solution-0.webp",
-    title: "전문가의 노하우를 반영한 AI 피드백 제공",
-    desc: "심박수를 이용해 체력 증가에 대한 실제적인 데이터를 받아보세요.",
+    title: "엔터프라이즈 패키지",
+    subTitle: "맞춤형 설계",
+    desc: [
+      "기본/프리미엄 패키지 모든 기능 포함",
+      "기업 맞춤형 건강 교육 세미나",
+      "임원진 대상 특별 프로그램",
+      "전담 건강 코치 배정",
+    ],
   },
 ];
 
-const teamData = [
+const TEAM_DATA = [
   {
     id: 1,
     name: "류현지",
@@ -142,7 +148,7 @@ export default function Slide({ type }: typeProp) {
               },
             }}
           >
-            {reviewData.map((review) => (
+            {REVIEW_DATA.map((review) => (
               <SwiperSlide key={review.id} className="mb-[3rem]">
                 <Review name={review.name} rank={review.rank} desc={review.desc} />
               </SwiperSlide>
@@ -189,11 +195,12 @@ export default function Slide({ type }: typeProp) {
               },
             }}
           >
-            {solutionData.map((solution) => (
+            {SOLUTION_DATA.map((solution) => (
               <SwiperSlide key={solution.id}>
                 <Solution
                   imgSrc={solution.imgSrc}
                   title={solution.title}
+                  subTitle={solution.subTitle}
                   desc={solution.desc}
                 />
               </SwiperSlide>
@@ -213,7 +220,6 @@ export default function Slide({ type }: typeProp) {
           </Swiper>
         </div>
       );
-
     case "team":
       return (
         <div className="mx-auto w-full max-w-[1200px]">
@@ -238,7 +244,7 @@ export default function Slide({ type }: typeProp) {
               },
             }}
           >
-            {teamData.map((team) => (
+            {TEAM_DATA.map((team) => (
               <SwiperSlide key={team.id} className="mb-[3rem]">
                 <Team name={team.name} nickname={team.nickname} careers={team.careers} />
               </SwiperSlide>
@@ -246,10 +252,10 @@ export default function Slide({ type }: typeProp) {
 
             <div className="flex items-center justify-center gap-[0.75rem]">
               <button className="team-prev-button flex h-[1.5rem] w-[1.5rem] cursor-pointer items-center justify-center rounded-[0.25rem] border border-[#505050] bg-[#fff]">
-                ←
+                <Icon name="icon-arrow-left" color="#000" fontSize={1} />
               </button>
               <button className="team-next-button flex h-[1.5rem] w-[1.5rem] cursor-pointer items-center justify-center rounded-[0.25rem] border border-[#505050] bg-[#fff]">
-                →
+                <Icon name="icon-arrow-right" color="#000" fontSize={1} />
               </button>
             </div>
           </Swiper>
