@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import "@/styles/icons.css";
 import Navbar from "@/components/Layout/Navbar";
+import Footer from "@/components/Layout/Footer";
 
 export const metadata: Metadata = {
   title: "Fitculator",
