@@ -1,3 +1,4 @@
+import SubBannerSection from "@/sections/SubBannerSection";
 import ReviewSection from "@/sections/ReviewSection";
 import SolutionSection from "@/sections/SolutionSection";
 import AboutSection from "@/sections/AboutSection";
@@ -11,6 +12,7 @@ import ContactUsSection from "@/components/ContactUsSection";
 export default function RootPage() {
   return (
     <>
+      <SubBannerSection />
       <ReviewSection />
       <SolutionSection />
       <AboutSection />

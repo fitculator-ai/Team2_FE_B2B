@@ -15,9 +15,14 @@ export default function AboutCard({ aboutData }: AboutCardType) {
     <div className="flex flex-col gap-[1.5rem] lg:gap-[0.5rem]">
       {aboutData.map((item) => (
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 2 }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false }}
+          transition={{
+            ease: "easeInOut",
+            duration: 2,
+            y: { duration: 1 },
+          }}
           key={item.id}
         >
           <div className="flex flex-col items-center justify-center gap-[1.25rem] rounded-[1.25rem] bg-[#F7F9FB] py-[2rem] lg:flex-row lg:gap-[12.5rem] lg:py-[1.25rem]">
