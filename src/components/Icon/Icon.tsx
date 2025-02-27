@@ -31,3 +31,17 @@ export default function Icon({ name, color, fontSize, style }: IconTypes) {
     return <span className={name} style={combinedStyle}></span>;
   }
 }
+
+/* 
+  ※ name
+  logo : icon-logo-light, icon-logo-dark
+  logoText : icon-logo-text-light, icon-logo-text-dark
+  arrow(top, down, right, left) : icon-arrow-top/down/right/left
+  chevron(left, right, down) : icon-chevron-left/right/down
+  point(*) : icon-point
+  checkbox : icon-checkbox-checked/unchecked
+  email : icon-email
+  thread : icon-thread
+  instagram : icon-instagram
+  plus: icon-plus
+*/
