@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import "@/styles/icons.css";
-import NavBar from "@/components/Layout/NavBar";
+import Navbar from "@/components/Layout/Navbar";
 
 export const metadata: Metadata = {
   title: "Fitculator",
@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ko" className={`${pretendard.className} scroll-smooth`}>
       <body className={`${pretendard.variable}`}>
-        <NavBar />
+        <Navbar />
         {children}
         <Footer />
       </body>
