@@ -2,10 +2,10 @@ interface teamType {
   name: string;
   nickname: string;
   careers: string[];
-  image: string;
+  // image: string;
 }
 
-export default function Team({ name, nickname, careers, image}: teamType) {
+export default function Team({ name, nickname, careers }: teamType) {
   return (
     <div className="h-[410px] max-w-[358px] rounded-2xl px-8 py-4 shadow-lg">
       <div className="flex items-center gap-2 pb-5">
@@ -14,7 +14,6 @@ export default function Team({ name, nickname, careers, image}: teamType) {
         <div>
           <p className="font-semibold">{name}</p>
           <p className="text-sm">{nickname}</p>
-          <img src={image} alt={name} width={10} height={10}/>
         </div>
       </div>
 
