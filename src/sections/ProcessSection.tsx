@@ -1,10 +1,10 @@
 "use client";
 
-import ProcessStep from "./ProcessStep";
-import { Navigation, Mousewheel, Pagination } from "swiper/modules";
+import ProcessStep from "../components/ProcessStep";
+import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Icon from "@/components/Icon/Icon";
-import SectionLayout from "./Layout/SectionLayout";
+import SectionLayout from "../components/Layout/SectionLayout";
 
 import "swiper/css";
 import "swiper/css/navigation";

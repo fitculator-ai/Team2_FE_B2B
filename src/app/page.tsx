@@ -1,5 +1,5 @@
 // import SectionLayout from "@/components/Layout/SectionLayout";
-import ProcessSection from "@/components/ProcessSection";
+import ProcessSection from "@/sections/ProcessSection";
 import ContactUsSection from "@/components/ContactUsSection";
 import FAQSection from "@/components/FAQSection";
 import ReviewSection from "@/sections/ReviewSection";
