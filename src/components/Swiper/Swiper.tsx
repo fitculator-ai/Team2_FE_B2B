@@ -5,6 +5,7 @@ import { Navigation, Mousewheel, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Review from "@/components/Swiper/Review/Review";
 import Solution from "@/components/Swiper/Solution/Solution";
+import Team from "@/components/Swiper/Team/Team";
 import Icon from "@/components/Icon/Icon";
 
 import "swiper/css";
@@ -12,7 +13,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 interface typeProp {
-  type: "review" | "solution";
+  type: "review" | "solution" | "team";
 }
 
 const reviewData = [
@@ -81,6 +82,39 @@ const solutionData = [
   },
 ];
 
+const teamData = [
+  {
+    id: 1,
+    name: "류현지",
+    nickname: "@ryoohyun",
+    careers: [
+      "연세대학교 체육학과 박사 졸업",
+      "연세대학교 체육교육학과 강사",
+      "국민체육진흥공단 건강운동관리사 연수원 강사",
+    ],
+  },
+  {
+    id: 2,
+    name: "박영진",
+    nickname: "@vpak.9",
+    careers: [
+      "연세대학교 체육학과 석사 졸업",
+      "연세대학교 융합체육과학선도 연구소 보조 연구원",
+      "대한축구협회 피트니스 트레이닝 자격 보유",
+    ],
+  },
+  {
+    id: 3,
+    name: "최재하",
+    nickname: "@jaeha_pool",
+    careers: [
+      "서울대학교 체육교육과 학사",
+      "National Academy of Sport Medicine Personal Trainer Certificate",
+      "University of Arizona Fitness & Wellness Coach",
+    ],
+  },
+];
+
 export default function Slide({ type }: typeProp) {
   switch (type) {
     case "review":
@@ -94,16 +128,16 @@ export default function Slide({ type }: typeProp) {
               nextEl: ".review-next-button",
               prevEl: ".review-prev-button",
             }}
-            spaceBetween={40}
-            slidesPerView={1}
+            spaceBetween={30}
+            slidesPerView={1.5}
             className="h-auto"
             breakpoints={{
               768: {
-                slidesPerView: 3,
-                spaceBetween: 40,
+                slidesPerView: 2,
+                spaceBetween: 50,
               },
               1024: {
-                slidesPerView: 4,
+                slidesPerView: 3,
                 spaceBetween: 60,
               },
             }}
@@ -174,6 +208,48 @@ export default function Slide({ type }: typeProp) {
               ></div>
               <button className="custom-next-button flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border border-gray-200 bg-white shadow-md transition-colors hover:bg-gray-50">
                 <Icon name="icon-arrow-down" color="#000" fontSize={1} />
+              </button>
+            </div>
+          </Swiper>
+        </div>
+      );
+
+    case "team":
+      return (
+        <div className="mx-auto w-full max-w-[1200px]">
+          <Swiper
+            modules={[Navigation]}
+            direction={"horizontal"}
+            navigation={{
+              nextEl: ".team-next-button",
+              prevEl: ".team-prev-button",
+            }}
+            spaceBetween={30}
+            slidesPerView={1.5}
+            className="h-auto"
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 16,
+              },
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 24,
+              },
+            }}
+          >
+            {teamData.map((team) => (
+              <SwiperSlide key={team.id} className="mb-[3rem]">
+                <Team name={team.name} nickname={team.nickname} careers={team.careers} />
+              </SwiperSlide>
+            ))}
+
+            <div className="flex items-center justify-center gap-[0.75rem]">
+              <button className="team-prev-button flex h-[1.5rem] w-[1.5rem] cursor-pointer items-center justify-center rounded-[0.25rem] border border-[#505050] bg-[#fff]">
+                ←
+              </button>
+              <button className="team-next-button flex h-[1.5rem] w-[1.5rem] cursor-pointer items-center justify-center rounded-[0.25rem] border border-[#505050] bg-[#fff]">
+                →
               </button>
             </div>
           </Swiper>
