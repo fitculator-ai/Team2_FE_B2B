@@ -36,7 +36,7 @@ export default function Form() {
 
   return (
     <form
-      className="flex w-[522px] flex-col content-center justify-center gap-2 rounded-3xl px-9 py-7 align-middle shadow-xl"
+      className="flex w-[460px] flex-col content-center justify-center gap-2 rounded-3xl px-9 py-7 align-middle shadow-xl"
       onSubmit={handleSubmit(onSubmit)}
     >
       <Input
@@ -98,6 +98,7 @@ export default function Form() {
           id="inquiryContent"
           name="inquiryContent"
           className="resize-none rounded-sm border border-gray-400 p-2 text-sm outline-[#1E88E5] focus:bg-[#F5F5F5]/68 focus:outline"
+          {...register("inquiryContent", { required: true })}
         ></textarea>
       </div>
 

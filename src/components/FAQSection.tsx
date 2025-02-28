@@ -29,14 +29,14 @@ const faqContents = [
 
 export default function FAQSection() {
   return (
-    <section className="flex flex-col items-center justify-center gap-2">
-      <h1 aria-label="자주 묻는 질문" className="text-5xl font-bold">
+    <section className="flex flex-col items-center justify-center gap-4 px-4 py-8 sm:px-8">
+      <h1 aria-label="자주 묻는 질문" className="text-4xl font-semibold sm:text-5xl">
         FAQ
       </h1>
-      <span className="text-xl font-light">
+      <span className="text-lg font-light sm:text-xl">
         자주 물어보신 질문들만 모아둔 FAQ를 참고해 주세요.
       </span>
-      <article>
+      <article className="w-full max-w-4xl">
         <ul>
           {faqContents.map(({ question, content, id }) => (
             <li key={id}>

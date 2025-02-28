@@ -6,7 +6,7 @@ interface IconTypes extends React.HTMLAttributes<HTMLSpanElement> {
   fontSize?: number;
 }
 
-export default function Icon({ name, color, fontSize, style }: IconTypes) {
+export default function Icon({ name, color, fontSize, style, ...rest }: IconTypes) {
   const combinedStyle = {
     fontSize: `${fontSize}rem`,
     color: color,
@@ -28,7 +28,7 @@ export default function Icon({ name, color, fontSize, style }: IconTypes) {
       </span>
     );
   } else {
-    return <span className={name} style={combinedStyle}></span>;
+    return <span {...rest} className={name} style={combinedStyle}></span>;
   }
 }
 
