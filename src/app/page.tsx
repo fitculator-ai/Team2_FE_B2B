@@ -6,9 +6,9 @@ import AboutSection from "@/sections/AboutSection";
 import SlideSolutionSection from "@/sections/SlideSolutionSection";
 import StatisticsSection from "@/sections/StatisticsSection";
 import TeamInfoSection from "@/sections/TeamInfoSection";
-import ProcessSection from "@/components/ProcessSection";
-import FAQSection from "@/components/FAQSection";
-import ContactUsSection from "@/components/ContactUsSection";
+import ProcessSection from "@/sections/ProcessSection";
+import FAQSection from "@/sections/FAQSection";
+import ContactUsSection from "@/sections/ContactUsSection";
 
 export default function RootPage() {
   return (
