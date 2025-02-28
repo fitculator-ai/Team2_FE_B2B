@@ -10,6 +10,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    variants: {
+      extend: {
+        rotate: ["group-hover", "group-focus", "group-open"],
+      },
+    },
     extend: {
       fontFamily: {
         pretendard: ["var(--font-pretendard)"],
