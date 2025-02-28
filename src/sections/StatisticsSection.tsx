@@ -21,6 +21,7 @@ export default function StatisticsSection() {
       subTitle="기업의 건강 운동 관리 파트너"
       description="임직원의 체력과 효율 상승을 경험해보세요"
       position="center"
+      isFullPage={false}
     >
       <div className="mx-auto flex max-w-[75rem] gap-4">
         {statsData.map((stats, index) => (

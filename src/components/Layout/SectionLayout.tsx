@@ -22,7 +22,9 @@ export default function SectionLayout({
   const fullPage = isFullPage ? "h-screen w-screen" : "";
 
   return (
-    <section className={`px-7 py-[5.625rem] md:px-15 ${fullPage}`}>
+    <section
+      className={`px-[20px] py-[40px] md:px-15 lg:px-7 lg:py-[5.625rem] ${fullPage}`}
+    >
       {(title || subTitle) && (
         <div className={`pb-10 ${titlePosition}`}>
           {title && <h2 className="text font-bold text-[#4FD5FF]">{title}</h2>}

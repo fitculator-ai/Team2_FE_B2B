@@ -36,7 +36,7 @@ export default function Form() {
 
   return (
     <form
-      className="flex w-[460px] flex-col content-center justify-center gap-2 rounded-3xl px-9 py-7 align-middle shadow-xl"
+      className="flex w-full flex-col content-center justify-center gap-2 rounded-3xl px-9 py-7 align-middle shadow-xl md:w-[460px]"
       onSubmit={handleSubmit(onSubmit)}
     >
       <Input
