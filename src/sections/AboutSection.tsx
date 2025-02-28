@@ -2,43 +2,43 @@
 import AboutCard from "@/components/Card/AboutCard";
 import SectionLayout from "@/components/Layout/SectionLayout";
 
-const aboutData = [
+const ABOUT_DATA = [
   {
     id: 0,
     imgSrc: "/image/about-0.webp",
-    title: "맞춤형 건강 챌린지",
+    title: "객관적인 데이터 기반 접근",
     desc: [
-      "선택 가능**: ① 운동만 챌린지 ② 운동+식단 챌린지",
-      "유연한 설계*: 팀/파트/전사 단위뿐만 아니라 동아리, 소모임도 가능!",
-      "*전문 코치 피드백**으로 지속적인 동기 부여",
+      "스마트워치 데이터를 활용한 정확한 운동량 측정",
+      "개인별 맞춤형 적정 운동량 가이드",
     ],
   },
   {
     id: 1,
     imgSrc: "/image/about-0.webp",
-    title: "맞춤형 건강 챌린지",
-    desc: [
-      "선택 가능**: ① 운동만 챌린지 ② 운동+식단 챌린지",
-      "유연한 설계*: 팀/파트/전사 단위뿐만 아니라 동아리, 소모임도 가능!",
-      "*전문 코치 피드백**으로 지속적인 동기 부여",
-    ],
+    title: "전문성과 신뢰성",
+    desc: ["운동생리학 박사 직접 설계 프로그램", "대학 강의 수준의 교육 컨텐츠 제공"],
   },
   {
     id: 2,
     imgSrc: "/image/about-0.webp",
-    title: "맞춤형 건강 챌린지",
+    title: "기존 복지 시스템과의 연계성",
     desc: [
-      "선택 가능**: ① 운동만 챌린지 ② 운동+식단 챌린지",
-      "유연한 설계*: 팀/파트/전사 단위뿐만 아니라 동아리, 소모임도 가능!",
-      "*전문 코치 피드백**으로 지속적인 동기 부여",
+      "건강검진 결과와 연동한 맞춤형 프로그램",
+      "기존 건강 복지 프로그램의 효과 극대화",
     ],
+  },
+  {
+    id: 3,
+    imgSrc: "/image/about-0.webp",
+    title: "가시적인 성과 측정",
+    desc: ["개인 및 기업 단위 건강지표 개선 리포트", "참여율 및 지속성 데이터 제공"],
   },
 ];
 
 export default function About() {
   return (
     <SectionLayout isFullPage={false} title="About" position="left" subTitleColor="point">
-      <AboutCard aboutData={aboutData} />
+      <AboutCard aboutData={ABOUT_DATA} />
     </SectionLayout>
   );
 }
