@@ -1,4 +1,5 @@
 import SectionLayout from "@/components/Layout/SectionLayout";
+
 import Slide from "@/components/Swiper/Swiper";
 
 export default function TeamInfoSection() {
