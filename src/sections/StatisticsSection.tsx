@@ -22,7 +22,7 @@ export default function StatisticsSection() {
       description="임직원의 체력과 효율 상승을 경험해보세요"
       position="center"
     >
-      <div className="flex max-w-[75rem] gap-4">
+      <div className="mx-auto flex max-w-[75rem] gap-4">
         {statsData.map((stats, index) => (
           <div
             key={index}
