@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Navigation, Mousewheel, Pagination } from "swiper/modules";
+import { Navigation, Mousewheel, Pagination, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Review from "@/components/Swiper/Review/Review";
 import Solution from "@/components/Swiper/Solution/Solution";
@@ -168,9 +168,9 @@ export default function Slide({ type }: typeProp) {
       return (
         <div className="relative h-full w-full">
           <Swiper
-            modules={[Navigation, Mousewheel, Pagination]}
+            modules={[Navigation, Mousewheel, Pagination, Autoplay]}
             direction={"horizontal"}
-            loop={true}
+            loop={false}
             navigation={{
               nextEl: ".custom-next-button",
               prevEl: ".custom-prev-button",
@@ -181,7 +181,13 @@ export default function Slide({ type }: typeProp) {
               bulletClass: "swiper-pagination-bullet custom-bullet",
               bulletActiveClass: "swiper-pagination-bullet-active custom-bullet-active",
             }}
-            mousewheel={true}
+            autoplay={{
+              delay: 1500,
+              pauseOnMouseEnter: true,
+            }}
+            mousewheel={{
+              releaseOnEdges: true,
+            }}
             spaceBetween={0}
             slidesPerView={1}
             speed={1000}
