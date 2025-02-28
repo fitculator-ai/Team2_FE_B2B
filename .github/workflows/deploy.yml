@@ -25,7 +25,7 @@ jobs:
 
         id: push_directory
 
-        uses: cpina/github-action-push-to-another-repository@v1.8.4
+        uses: cpina/github-action-push-to-another-repository@v1.5
 
         env:
           API_TOKEN_GITHUB: ${{ secrets.JUBI_GITHUB_KEY }}

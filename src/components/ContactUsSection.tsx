@@ -6,6 +6,7 @@ import SectionLayout from "./Layout/SectionLayout";
 export default function ContactUsSection() {
   return (
     <SectionLayout isFullPage={false}>
+
       <h1 className="sr-only">문의하기</h1>
       <article className="flex flex-col items-center justify-between gap-10 md:flex-row md:items-start">
         <h2 className="mt-20 flex flex-col items-center text-center max-[1170px]:flex-col min-[1171px]:flex-row min-[1171px]:text-left">
