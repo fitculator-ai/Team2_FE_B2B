@@ -1,24 +1,30 @@
 import Image from "next/image";
 import Form from "./Form";
 import mainLogo from "../../public/image/logo_text.png";
+import SectionLayout from "./Layout/SectionLayout";
 
 export default function ContactUsSection() {
   return (
-    <section id="contactUs" className="flex flex-row items-start justify-between">
-      <h1 className="sr-only">문의하기</h1>
-      <h2 className="mt-36 flex flex-row items-center">
-        <Image
-          src={mainLogo}
-          className="h-12 w-72"
-          width={600}
-          height={600}
-          alt="fitculator 로고"
-          aria-label="핏큘레이터"
-        />
-        <span className="inline-block text-3xl font-black">와 함께 해보세요</span>
-      </h2>
+    <SectionLayout isFullPage={false}>
 
-      <Form />
-    </section>
+      <h1 className="sr-only">문의하기</h1>
+      <article className="flex flex-col items-center justify-between gap-10 md:flex-row md:items-start">
+        <h2 className="mt-20 flex flex-col items-center text-center max-[1170px]:flex-col min-[1171px]:flex-row min-[1171px]:text-left">
+          <Image
+            src={mainLogo}
+            className="h-12 w-72"
+            width={600}
+            height={600}
+            alt="fitculator 로고"
+            aria-label="핏큘레이터"
+          />
+          <span className="mt-2 inline-block text-3xl font-black min-[1171px]:ml-3 md:mt-0">
+            와 함께 해보세요
+          </span>
+        </h2>
+
+        <Form />
+      </article>
+    </SectionLayout>
   );
 }
