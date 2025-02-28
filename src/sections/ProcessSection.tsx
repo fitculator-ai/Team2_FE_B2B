@@ -1,6 +1,6 @@
 "use client";
 
-import ProcessStep from "../components/ProcessStep";
+import ProcessStep from "./ProcessStep";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Icon from "@/components/Icon/Icon";

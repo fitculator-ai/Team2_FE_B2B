@@ -7,8 +7,8 @@ import SlideSolutionSection from "@/sections/SlideSolutionSection";
 import StatisticsSection from "@/sections/StatisticsSection";
 import TeamInfoSection from "@/sections/TeamInfoSection";
 import ProcessSection from "@/sections/ProcessSection";
-import FAQSection from "@/components/FAQSection";
-import ContactUsSection from "@/components/ContactUsSection";
+import FAQSection from "@/sections/FAQSection";
+import ContactUsSection from "@/sections/ContactUsSection";
 
 export default function RootPage() {
   return (
